@@ -1,0 +1,34 @@
+:root{
+    --CorDeFundo: #fffbde;
+    --CorDosLinks: #ffccbd;
+    --CorDoTexto: #4d4b4d;
+    --CorDeDestaque: #89f336;
+}
+
+.meie-script-regular{
+    font-family: "Meie Script", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.quintessential-regular{
+    font-family: "Quintessential", Arial, Helvetica, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: var(--CorDeFundo);
+    color: var(--CorDoTexto);
+    scroll-behavior: smooth;
+}
+
+figcaption img{
+    align-items: center;
+    width: 86vh;
+    max-width: 200%
+}
+
+.Baralho img{
+    display: none;
+}

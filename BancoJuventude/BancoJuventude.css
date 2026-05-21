@@ -29,32 +29,67 @@ a{
 
 a:hover{
     color: var(--CorDosLinks);
+    text-decoration: underline;
 }
 
 nav{
     background-color: var(--CorDeDestaque);
     display: flex;
+    align-self: center;
     align-items: center;
     gap: 75px;
     position: sticky;
     z-index: 100;
+    box-shadow: 1px 2px 10px 0px var(--CorDoTexto);
 }
 
-nav img{
+nav figcaption a img{
     width: 50px;
 }
 
-nav button{
-    background-color: var(--CorDeDestaque);
+nav a{
     color: var(--CorDoTexto);
-    border: none;
-    outline: none;
 }
 
-nav button:hover{
-    color: var(--CorDosLinks);
+.texto{
+    font-size: 18.5px;
+}
+
+.cartao{
+    background: var(--CorDeDestaque);
+    display: grid;
+    padding: 20px;
+    box-shadow: 1px 2px 10px 0px var(--CorDoTexto);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    '';
 }
 
 footer{
     background-color: var(--CorDeDestaque);
+    box-shadow: 1px 2px 10px 0px var(--CorDoTexto);
+}
+
+@media (min-width: 700px) {
+    *{
+        font-size: 18px;
+    }
+    nav figcaption a img{
+        width: 60px;
+    }
+    .texto{
+        font-size: 21.5px;
+    }
+}
+
+@media (min-width: 900px) {
+    *{
+        font-size: 21px;
+    }
+    nav figcaption a img{
+        width: 70px;
+    }
+    .texto{
+        font-size: 24.5px;
+    }
 }
