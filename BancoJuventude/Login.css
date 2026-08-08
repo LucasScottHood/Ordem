@@ -25,6 +25,7 @@ body{
     background-image: url(Silhueta.png);
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-position: center;
@@ -47,20 +48,6 @@ form{
     font-weight: bold;
 }
 
-form p{
-    margin-top: -20px;
-}
-
-form a{
-    color: var(--CorDoTexto);
-    text-decoration: none;
-}
-
-form a:hover{
-    color: var(--CorDosLinks);
-    text-decoration: underline;
-}
-
 form button{
     background-color: var(--CorDoTexto);
     color: var(--CorDeFundo);
@@ -68,4 +55,21 @@ form button{
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+p{
+    color: var(--CorDeDestaque);
+    display: flex;
+    font-weight: bold;
+    gap: 5px;
+}
+
+p a{
+    color: var(--CorDeDestaque);
+    text-decoration: none;
+}
+
+p a:hover{
+    color: var(--CorDosLinks);
+    text-decoration: underline;
 }
