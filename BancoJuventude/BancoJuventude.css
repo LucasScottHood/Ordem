@@ -36,9 +36,10 @@ nav{
     background-color: var(--CorDeDestaque);
     display: flex;
     position: sticky;
+    top: 0px;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1;
     box-shadow: 1px 2px 10px 0px var(--CorDoTexto);
 }
 
@@ -57,16 +58,92 @@ nav a{
 .cartao{
     background: var(--CorDeDestaque);
     display: grid;
+    justify-items: center;
     padding: 20px;
     box-shadow: 1px 2px 10px 0px var(--CorDoTexto);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    '';
+    "BeloHorizonte  BeloHorizonte   SerraDaSaudade   SerraDaSaudade"
+    "BomFim         BomFim          Tupaciguara      Tupaciguara"
+    "Araçuaí        Araçuaí         Araçuaí          Araçuaí";
+}
+
+.TextoUm{
+    grid-area: BeloHorizonte;
+}
+
+.TextoUm:hover{
+    color: var(--CorDosLinks);
+    text-decoration: underline;
+}
+
+.TextoDois{
+    grid-area: SerraDaSaudade;
+}
+
+.TextoDois:hover{
+    color: var(--CorDosLinks);
+    text-decoration: underline;
+}
+
+.TextoTres{
+    grid-area: BomFim;
+}
+
+.TextoTres:hover{
+    color: var(--CorDosLinks);
+    text-decoration: underline;
+}
+
+.TextoQuatro{
+    grid-area: Tupaciguara;
+}
+
+.TextoQuatro:hover{
+    color: var(--CorDosLinks);
+    text-decoration: underline;
+}
+
+.TextoCinco{
+    grid-area: Araçuaí;
+}
+
+.TextoCinco:hover{
+    color: var(--CorDosLinks);
+    text-decoration: underline;
 }
 
 footer{
     background-color: var(--CorDeDestaque);
     box-shadow: 1px 2px 10px 0px var(--CorDoTexto);
+    text-align: center;
+}
+
+@media(max-width: 350px) {
+    *{
+        font-size: 15px;
+    }
+    nav{
+    flex-direction: column;
+    }
+    nav figcaption a img{
+        width: 45px;
+    }
+    .cartao{
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "BeloHorizonte"
+    "SerraDaSaudade"
+    "BomFim"
+    "Tupaciguara"
+    "Araçuaí";
+}
+
+.texto{
+        font-size: 15.5px;
+    }
 }
 
 @media (min-width: 700px) {
