@@ -1,9 +1,10 @@
-const Usuario = getElementById("email");
-const Senha = getElementById("password");
+const Formulario = document.getElementById(".Formulario");
+const Usuario = document.getElementById("email");
+const Senha = document.getElementById("password");
 
 const UsuariosRegistrados = [
-    { email: "igorpazzianoto@gmail.com", senha: "123456" },
-    { email: "georginapazzianoto@gmail.com", senha: "123456" },
+    { email: "igorpazzianoto@gmail.com", senha: "123456"},
+    { email: "georginapazzianoto@gmail.com", senha: "123456"},
 ];
 
 if (!localStorage.getItem("Registros")) {
@@ -11,16 +12,17 @@ if (!localStorage.getItem("Registros")) {
 }
 const UsuariosNoBancoDeDados = JSON.parse(localStorage.getItem("Registros"));
 
+Formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
+
 const ProcurarUsuario = UsuariosRegistrados.find(usuario => 
-    usuario.email === Usuario && usuario.senha === Senha
+    usuario.email === Usuario.value && usuario.senha === Senha.value
 );
 
-if (ProcurarUsuario)
-{
-    alert("Login realizado com sucesso!");
-    window.location.href = "BancoJuventude.html";
-} 
-else 
-{
-    mensagem.textContent = "E-mail ou senha incorretos!";
-}
+if (ProcurarUsuario) {
+        alert("Login realizado com sucesso!");
+        window.location.href = "BancoJuventude.html";
+    } else {
+        mensagem.textContent = "E-mail ou senha incorretos!";
+    }
+});
