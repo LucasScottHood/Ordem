@@ -47,6 +47,10 @@ form{
     font-weight: bold;
 }
 
+form p{
+    margin-top: -20px;
+}
+
 form a{
     color: var(--CorDoTexto);
     text-decoration: none;
