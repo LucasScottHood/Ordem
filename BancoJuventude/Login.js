@@ -1,4 +1,4 @@
-const Formulario = document.getElementById(".Formulario");
+const Formulario = document.getElementById("Formulario");
 const Usuario = document.getElementById("email");
 const Senha = document.getElementById("password");
 
@@ -15,7 +15,7 @@ const UsuariosNoBancoDeDados = JSON.parse(localStorage.getItem("Registros"));
 Formulario.addEventListener("submit", function(event) {
     event.preventDefault();
 
-const ProcurarUsuario = UsuariosRegistrados.find(usuario => 
+const ProcurarUsuario = UsuariosNoBancoDeDados.find(usuario => 
     usuario.email === Usuario.value && usuario.senha === Senha.value
 );
 
