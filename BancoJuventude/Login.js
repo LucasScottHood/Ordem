@@ -2,6 +2,7 @@ const Formulario = document.getElementById("Formulario");
 const Usuario = document.getElementById("email");
 const Senha = document.getElementById("password");
 const Mensagem = document.getElementById("mensagem");
+export let Logado = false;
 
 const UsuariosRegistrados = [
     { email: "igorpazzianoto@gmail.com", senha: "123456"},
@@ -23,6 +24,7 @@ const ProcurarUsuario = UsuariosNoBancoDeDados.find(usuario =>
 if (ProcurarUsuario) {
         alert("Login realizado com sucesso!");
         window.location.href = "BancoJuventude.html";
+        Logado = true;
     } else {
         Mensagem.textContent = "E-mail ou senha incorretos!";
     }
