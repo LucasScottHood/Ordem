@@ -23,7 +23,7 @@ const ProcurarUsuario = UsuariosNoBancoDeDados.find(usuario =>
 
 if (ProcurarUsuario) {
         alert("Login realizado com sucesso!");
-        window.location.href = "BancoJuventude.html";
+        window.location.href = "https://lucasscotthood.github.io/Ordem/BancoJuventude/BancoJuventude.html";
         Logado = true;
     } else {
         Mensagem.textContent = "E-mail ou senha incorretos!";
