@@ -2,7 +2,6 @@
     --CorEsmeralda: #00674F;
     --CorDoTexto: black;
     --CorDeDestaque: #D3D3D3;
-    --CorPraBunitu: #A9A9A9;
 }
 
 body{
@@ -16,14 +15,21 @@ a{
 }
 
 nav{
+    background-color: var(--CorDeDestaque);
     display: flex;
     position: sticky;
+    top: 0;
     align-items: center;
-    z-index: 2;
+    z-index: 1;
 }
 
 nav img{
     width: 50px;
+}
+
+p{
+    text-align: center;
+    color: var(--CorDeDestaque);
 }
 
 h1{
@@ -40,25 +46,22 @@ h1{
     display: grid;
     padding: 10px;
     margin-bottom: 25px;
-    box-shadow: 1px 2px 10px 5px var(--CorPraBunitu);
 }
 
-.cartao a{
-    color: var(--CorDeDestaque);
+.cartao p{
+    text-align: start;
 }
 
 .comunicado{
     text-align: center;
+    font-style: bold;
     text-decoration: underline;
 }
 
-footer{
+footer p{
     margin: 25px;
     color: var(--CorEsmeralda);
-}
-
-footer a{
-    color: var(--CorEsmeralda);
+    text-align: start;
 }
 
 @media (min-width: 700px) {
